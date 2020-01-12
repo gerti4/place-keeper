@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preference</title>
+    <link rel="stylesheet" href="css/user-prefs.css">
+</head>
+
+
+<body onload="renderUserPref()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Place Keeper</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+        </nav>
+        <h1>User preference</h1>
+    </header>
+    <section>
+        <form onsubmit="event.preventDefault()">
+            <table align="center" \>
+                <tr>
+                    <td>Background color <input type="color" value="#C0C0C0" name="background"></td>
+                    <td>Header color <input type="color" value="#bc7272" name="backgroundHeader"></td>
+                    <td>Text color <input type="color" value="#202020" name="txt"></td>
+                </tr>
+                <tr>
+                    <td>Enter your Birthday <input type="date" name="userDate" value="data" required></td>
+                    <td>Enter your birth time <input type="time" name="userTime" value="time" required></td>
+                    <td>Email <input type="email" name="email" placeholder="Email address" /></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Age:</label></td>
+                    <td></td>
+                    <td><input type="range" id="age" name="age" min="18" max="120" value="26"
+                            onchange="showAge(this.value);" />
+                        <span id="sAge">18</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div>
+            <button onclick="onSubmit()">Submit</button>
+        </div>
+    </section>
+</body>
+
+
+<script src="js/service.js"></script>
+<script src="js/user-prefs-controller.js"></script>
+
+</html>

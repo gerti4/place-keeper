@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Map</title>
+  <link rel="stylesheet" href="css/map-style.css">
+</head>
+
+<body>
+  <header>
+      <nav>
+          <ul>
+              <li><a href="index.html">Place Keeper</a></li>
+          </ul>
+      </nav>
+      <h1 class="head">Select your places!</h1>
+  </header>
+  <section class="container">
+    <div id="map"></div>
+    <aside class="place-info">
+      <h1>My places<button class="page-btn" onclick="pagePlaces(1)">⇨</button></h1>
+      <table>
+        <tbody>
+        </tbody>
+      </table>
+    </aside>
+    <button class="center" onclick="centerUserMap()">📍</button>
+  </section>
+
+
+  <script src="js/map-service.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0AAcennjMo2tqULw0Jy4xeADyspU0Lu8&callback=initialize"
+    type="text/javascript"></script>
+
+
+  <script src="js/main.js"></script>
+
+
+</body>
+
+
+</html>
